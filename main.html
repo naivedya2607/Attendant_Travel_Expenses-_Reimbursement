@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendant Travel Expenses Reimbursement</title> 
+  <style>
+      input[type="text"], input[type="date"], select {
+      width:98%;
+      }
+    
+      body{
+            background-image: url('Attendant.png');
+      background-position: center;
+      background-repeat: no-repeat;
+        background-size: 60%;
+        font-weight: bold; 
+    }
+    div{
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 20px; 
+    }
+    
+       h3{
+         color: #FFFFFF;
+         background-color: #6666FF;
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
+         width: 50%;
+         font-family: Verdana;
+         padding: 5px;
+         border-radius: 6px;
+       }
+      
+      table, td, tr{
+          border: solid 2px black;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 1px;
+        border-radius: 6px;
+        color: #000000;
+        background-color: #E6E6E6;
+        padding: 1px;
+      }
+    
+      ::-webkit-input-placeholder { 
+        color: #696969;
+        font-weight: bold;
+      }
+      
+      #submit{
+        color: #FFFFFF;
+        background-color: #6666FF;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        width: 50%;
+        font-family: Verdana;
+        font-weight: bold;
+        border-radius: 6px;
+      }
+      #result{
+        color: #00CC66;
+        font-size: 20px;
+      }
+    </style>
+</head>
+  
+<body>
+<div>
+    
+<h3>Attendant Travel Expenses Reimbursement</h3>
+<form onsubmit="return display()" >
+<table>
+  <tr>
+        <td>Attendant Name</td>
+        <td><input type="text" id="aname" name="aname" placeholder="Enter the attendant name" required></td>
+    </tr>
+  <tr>
+       <td>Phone Number</td>
+     <td><input type="text" id="phno" name="phno" placeholder="Enter the phone number" required></td>
+    </tr>
+  <tr>
+        <td>Request Id</td>
+        <td><input type="text" id="rid" name="rid" placeholder="Enter the request id" required></td>
+    </tr>
+  <tr>
+        <td>Date of Request</td>
+        <td><input type="date" id="requestdate" name="requestdate" required></td>
+    </tr>
+  <tr>
+    <td>Attendant Grade</td>
+    <td><select name="grade" id="grade" required>
+        <option value="Select Attendant Grade..">Select Attendant Grade..
+        </option>
+        <option value="Grade01">Grade01
+        </option>
+        <option value="Grade02">Grade02
+        </option>
+        <option value="Grade03">Grade03
+        </option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+        <td>Number of Days Stay</td>
+        <td><input type="text"  id="noOfDays" name="noOfDays" placeholder="Enter the number of days stay" required></td>
+    </tr>
+  <tr>
+        <td>Number of KMS for Travel</td>
+        <td><input type="text" id="kms" name ="kms" placeholder="Enter the number of kms" required></td>
+    </tr>
+</table>
+
+<p><input type="submit" id="submit" name="submit" value="SEND REQUEST" /></p>
